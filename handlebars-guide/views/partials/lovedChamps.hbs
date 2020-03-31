@@ -1,0 +1,51 @@
+
+
+<div class="wraper">
+  
+  {{#each data}}
+  <div class="card">
+  <div class="card-header">
+   {{dataValues.title}} <span class="cartspan"><a href="/api/edit/{{dataValues.id}}">Edit</a></span>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><a href="posts">add new post</a></h5>
+    <p class="card-text">{{dataValues.body}}</p>
+     
+    <form action="delete/{{dataValues.id}}" method="POST">
+     <input type="submit" value="Delete" class="btn btn-primary" id="dellet" style="float: right;"/>
+    </form>
+      <form action="comments/{{dataValues.id}}" method="POST" class="comform">
+     <input type="submit" value="add comment"  class="comment btn btn-secondary"/>
+    </form>
+  </div>
+</div>
+   
+   
+  {{else}}
+   <div class="jumbo">
+        <div class="jumb">
+          <h1 class="display-4">worning!</h1>
+          <p class="lead">you have no posts yet</p>
+          <hr class="my-4">
+          <p>I
+to add a post follow the link.</p>
+        <a class="btn btn-primary btn-lg" href="posts" role="button">Add post</a>
+        </div>
+      </div>
+  {{/each}}
+  
+</div>
+
+
+ {{!-- <form action="/upload" method="POST" enctype="multipart/form-data">
+      <div class="file-field input-field">
+        <div class="btn grey">
+          <span>File</span>
+          <input name="myImage" type="file">
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text">
+        </div>
+      </div>
+      <button type="submit" class="btn">Submit</button>
+    </form> --}}

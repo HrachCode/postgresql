@@ -1,0 +1,68 @@
+li {
+    font-size: 2rem;
+    width: 300px;
+    margin: 4px;
+    padding: 4px;
+    list-style: none
+}
+.midlaner {background-color: #ffea00}
+.toplaner {background-color: #eeeeee}
+
+.send{
+    width: 60%;
+    margin: 40px auto;
+}
+
+.card{
+    width: 27%;
+    margin: 35px 0 35px 0px;
+}
+.wraper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: aliceblue;
+}
+#collapsibleNavbar{
+    justify-content: flex-end;
+
+}
+
+#collapsibleNavbar ul>li{
+   width: 43%;
+
+}
+#collapsibleNavbar ul{
+    margin-right: 120px;
+}
+
+.cartspan{
+    float: right;
+    color: green;
+    font-family: monospace;
+    font-size: large;
+}
+
+.dell{
+    background-image: url('./img/delete.png');
+    width: 14%;
+    height: 46px;
+    background-size: cover;
+    float: right;
+
+}
+.comform{
+    position: relative;
+}
+.comment{
+    padding: 0 !important;
+    position: absolute;
+    top: 28px;
+    left: -14px;
+}
+.jumbo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 40px 0;
+}

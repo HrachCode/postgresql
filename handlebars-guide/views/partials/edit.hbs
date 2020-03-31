@@ -1,0 +1,22 @@
+
+
+
+  <form class="send" method="POST" action="/comments">
+  <fieldset>
+   <div class="form-group">
+    <label for="username">Add comments</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="usernam" placeholder="your name">
+    <small id="emailHelp" class="form-text text-muted">enter name</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">your comments</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="comment" placeholder="coment">
+   
+  </div>
+  <input type="hidden" name="id" value="{{id}}">
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </fieldset>
+</form>  
+
+

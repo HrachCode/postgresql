@@ -1,0 +1,39 @@
+
+
+{{#if edit}}
+
+  <form class="send" method="POST" action="/api/editpost">
+  <fieldset>
+   <div class="form-group">
+    <label for="exampleInputEmail1">Enter tilel for post</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="title" value="{{edit.title}}">
+    <small id="emailHelp" class="form-text text-muted">enter title</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Enter post</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="post" value="{{edit.body}}">
+    <small id="emailHelp" class="form-text text-muted">add new post</small>
+  </div>
+        <input type="hidden" name="id" value="{{edit.id}}" />
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </fieldset>
+</form>
+
+  {{else}}
+  <form class="send" method="POST" action="/posts">
+  <fieldset>
+   <div class="form-group">
+    <label for="exampleInputEmail1">Edit post</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="title" placeholder="titel">
+    <small id="emailHelp" class="form-text text-muted">enter title</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Enter post</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="post" placeholder="Enter post">
+    <small id="emailHelp" class="form-text text-muted">add new post</small>
+  </div>
+ 
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </fieldset>
+</form>
+  {{/if}}
