@@ -6,6 +6,16 @@ Coment.post('/:id',(req,res)=>{
     
    res.render('main',{id:req.params.id})
 })
+Coment.get('/:id',(req,res)=>{
+    console.log(req.params.id);
+    coments.findAll({where:{posts_id: req.params.id}, raw: true })
+    .then(data=>{
+       res.render('comments',{comments:data})
+        
+    })
+    .catch(err=> console.log(err))
+    
+})
 
 Coment.post('/', async (req,res)=>{
     let newComment = {

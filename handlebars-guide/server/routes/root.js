@@ -12,5 +12,8 @@ root.get('/',(req,res)=>{
         
     })
 })
+root.get('/superadmin',(req,res)=>{
+    res.render('admin')
+})
 
 module.exports = root;
