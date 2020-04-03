@@ -1,6 +1,6 @@
 const Sequelize = require("sequelize");
 
-// определяем объект Sequelize
+
 // const sequelize = new Sequelize("onvqjoin", "onvqjoin", "i9xJN2LSDFfZDYutw0bTRmFmRoH5DHfW", {
 //     "logging" : false,
 //     dialect: "postgres",

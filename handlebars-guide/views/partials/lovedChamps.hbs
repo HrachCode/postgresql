@@ -1,18 +1,27 @@
 
 
 <div class="wraper">
-  
+ 
+ 
   {{#each data}}
+ 
   <div class="card">
+   
   <div class="card-header">
    {{dataValues.title}} <span class="cartspan"><a href="/api/edit/{{dataValues.id}}">Edit</a></span>
   </div>
+   {{dataValues.value1}}
   <div class="card-body">
     <h5 class="card-title"><a href="posts">add new post</a></h5>
     <p class="card-text">{{dataValues.body}}</p>
      
     <form action="delete/{{dataValues.id}}" method="POST">
-     <input type="submit" value="Delete" class="btn btn-primary" id="dellet" style="float: right;"/>
+    
+     <button class="btns btn-delete" type="submit" id="dellet" style="float: right;">
+  <span class="mdi mdi-delete mdi-24px"></span>
+  <span class="mdi mdi-delete-empty mdi-24px"></span>
+  <span>Delete</span>
+</button>
     </form>
       <form action="comments/{{dataValues.id}}" method="POST" class="comform">
      <input type="submit" value="add comment"  class="comment btn btn-secondary"/>

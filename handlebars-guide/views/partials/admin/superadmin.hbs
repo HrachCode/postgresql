@@ -1,11 +1,15 @@
 <div class="admin">
     <div id="wrapper">
 
-	<form id="paper" method="get" action="admin">
+	<form id="paper" method="post" action="admin/test">
 
-		<div id="margin">Title: <input id="title" type="text" name="title"></div>
-		<textarea placeholder="Enter something funny." id="text" name="text" rows="4" style="overflow: hidden; word-wrap: break-word; resize: none; height: 160px; "></textarea>  
-		<br>
+		{{!-- <div id="margin">Title: <input id="title" type="text" name="title"></div> --}}
+		<textarea placeholder="Enter frist." id="text" name="home" rows="4" style="overflow: hidden; word-wrap: break-word; resize: none; height: 160px; "></textarea>  
+	
+		<textarea placeholder="Enter value." id="text" name="comments" rows="4" style="overflow: hidden; word-wrap: break-word; resize: none; height: 160px; "></textarea>  
+		
+		<textarea placeholder="Enter  funny." id="text" name="admin" rows="4" style="overflow: hidden; word-wrap: break-word; resize: none; height: 160px; "></textarea>  
+	
 		<input id="button" type="submit" value="Create">
 		
 	</form>

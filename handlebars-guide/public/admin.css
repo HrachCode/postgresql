@@ -187,11 +187,12 @@
   /*----------------show sidebar button----------------*/
   #show-sidebar {
     position: fixed;
-    left: 0;
+    left: 30px;
     top: 10px;
     border-radius: 0 4px 4px 0px;
-    width: 35px;
+    width: 52px;
     transition-delay: 0.3s;
+    z-index: 3;
   }
   .page-wrapper.toggled #show-sidebar {
     left: -40px;
@@ -574,4 +575,6 @@
   .chiller-theme .sidebar-footer>a:last-child {
       border-right: none;
   }
-  
+  .btn-sm{
+    font-size: 1.875rem !important;
+  }

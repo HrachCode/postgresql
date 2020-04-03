@@ -5,7 +5,7 @@ const morgan = require('morgan')
 const path = require('path')
 const sequelize = require('./server/config/index')
 const favicon = require('express-favicon');
-
+const errorhendler = require('./server/midlwers/err_404')
 
 
 const handlebars = require('express-handlebars');
@@ -29,14 +29,16 @@ app.use('/api',require('./server/routes/edit'))
 app.use('/delete',require('./server/routes/delate'))
 app.use('/posts',require('./server/routes/posts'))
 app.use('/comments',require('./server/routes/coments'))
+app.use('/admin',require('./server/routes/admin'))
 
 
 app.get('/test', (req, res) => {
   res.render('index');
 });
 
+app.use(errorhendler)
 
-
+//{force: true}
 sequelize.sync().then(()=>{
   app.listen(port, function(){
     console.log("Сервер ожидает подключения... 3000");
