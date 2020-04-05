@@ -1,5 +1,6 @@
 const Sequelize = require("sequelize");
 const sequelize = require('../../config/index')
+const JsonField = require('sequelize-json')
 
  // И lang
  let lang = sequelize.define('language', {
@@ -10,10 +11,7 @@ const sequelize = require('../../config/index')
       type: Sequelize.DataTypes.INTEGER
     },
    
-    value1: {
-     type:Sequelize.DataTypes.STRING,
-      allowNull: true
-    },
+    value1: JsonField(sequelize, 'language', 'value1'),
     language: {
       type: Sequelize.DataTypes.STRING,
       allowNull: false

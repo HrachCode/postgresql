@@ -2,6 +2,7 @@ const express = require('express');
 const Admin = express.Router();
 const admin = require('../models/language/lang');
 
+
 Admin.post('/test',(req,res)=>{
    
    const heder = {
@@ -11,7 +12,7 @@ Admin.post('/test',(req,res)=>{
    } 
 
    const newComment = {
-    value1:JSON.stringify(heder),
+    value1:heder,
     language:'en',
     
     }

@@ -4,19 +4,15 @@ const posts = require('../models/posts')
 const lang = require('../models/language/lang')
 
 root.get('/',(req,res)=>{
+    
     posts.findAll()
     .then(data=>{
        
         lang.findAll().then(lang=>{
         if(lang.length > 0){
            
-            const result = {
-                data:data,
-                lang:lang
-            }
-           
             
-            res.render('home',{data:result})
+            res.render('home',{data:data, title:'home',home:true})
         }else{
             console.log('not finde');  
         } 
@@ -28,7 +24,12 @@ root.get('/superadmin',(req,res)=>{
 })
 
 root.get('/login',(req,res)=>{
-    res.render('404')
+    console.log(res.locals);
+    
+    res.render('login',{
+        title:'login',
+        navlog:true
+    })
 })
 
 module.exports = root;
