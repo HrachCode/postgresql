@@ -4,7 +4,7 @@ const admin = require('../models/language/lang');
 
 
 Admin.post('/test',(req,res)=>{
-   
+    
    const heder = {
        home:req.body.home,
        comments:req.body.comments,
@@ -31,7 +31,6 @@ Admin.post('/test',(req,res)=>{
 
 Admin.post('/test2',(req,res)=>{
    
-    
     admin.findAll()
     .then(data=>{
         console.log(data);

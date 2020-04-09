@@ -32,3 +32,10 @@ $(document).ready(function(){
       
       
     });
+
+     /* Cart styles */
+  $(".hover").mouseleave(
+    function () {
+      $(this).removeClass("hover");
+    }
+  );

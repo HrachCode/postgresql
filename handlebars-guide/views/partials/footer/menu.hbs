@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
   <!-- Brand -->
-  <a class="navbar-brand" href="/" style="margin-left: 24px;">Navbar</a>
+  <a class="navbar-brand" href="/" style="margin-left: 24px;"><img src="/img/nodejs.webp" alt="logo"></a>
 
   <!-- Toggler/collapsibe Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -24,10 +24,22 @@
       <li class="nav-item">
         <a class="nav-link" href="coments">Coments</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="superadmin">admin</a>
+      {{#if isAuth}}
+       {{#if adminlog}}
+        <li class="nav-item navlink_ul_li">
+        <a class="nav-link" href="/superadmin">admin</a>
       </li>
-      {{#if navlog}}
+      {{else}}
+       <li class="nav-item">
+        <a class="nav-link" href="/superadmin">admin</a>
+      </li>
+      {{/if}}
+       <li class="nav-item" >
+        <a class="nav-link" href="/logaut">logaut</a>
+      </li>
+
+      {{else}}
+       {{#if navlog}}
          <li class="nav-item navlink_ul_li" >
         <a class="nav-link" href="login">login</a>
       </li>
@@ -36,6 +48,8 @@
         <a class="nav-link" href="login">login</a>
       </li>
      {{/if}}
+      {{/if}}
+     
        
     </ul>
   </div>

@@ -10,7 +10,7 @@ edit.get("/edit/:id", function(req, res){
   
     posts.findAll({where:{id: postid}, raw: true })
     .then(data=>{
-        console.log(data);
+       
         
       res.render("index",{edit:data[0]});
     })

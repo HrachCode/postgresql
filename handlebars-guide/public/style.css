@@ -308,3 +308,119 @@ span,
   color: #1161ed ;
   background-color: #494f58;
 }
+
+/* ------------------------------tab------------------------------------------------ */
+
+#exTab1 .tab-content {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
+}
+
+#exTab2 h3 {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 10px;
+}
+#exTab2 .active {
+  color : rgba(255, 255, 255, 0.5);
+  border-bottom: seagreen 1px solid;
+  padding : 5px 10px;
+}
+/* remove border radius for the tab */
+
+#exTab1 .nav-pills > li > a {
+  border-radius: 0;
+}
+
+/* change border radius for the tab , apply corners on top*/
+
+.text+ span{
+  color: #eeeeee;
+}
+
+/*======================
+    404 page
+=======================*/
+
+
+.page_404{ padding:40px 0; background:#fff; font-family: 'Arvo', serif;
+}
+
+.page_404  img{ width:100%;}
+
+.four_zero_four_bg{
+ 
+ background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+    height: 400px;
+    background-position: center;
+ }
+ 
+ 
+ .four_zero_four_bg h1{
+ font-size:80px;
+ }
+ 
+  .four_zero_four_bg h3{
+             font-size:80px;
+             }
+             
+             .link_404{          
+    color: #fff!important;
+    padding: 10px 20px;
+    background: #39ac31;
+    margin: 20px 0;
+    display: inline-block;}
+    .contant_box_404{ margin-top:-50px;}
+
+
+
+    .tests{
+      /* background-image: url(https://cdn.dribbble.com/users/1803663/screenshots/10977530/media/f7fc61a62d953a220dc8b12ddcee6f09.png);
+      height: 400px; */
+      background-position: center;
+     
+   }
+
+   /* ---------------backgroundvideo------------------------- */
+
+   #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    top: 79px;
+  }
+  .text-center{
+      margin: 0 auto;
+  }
+  
+  /* Add some content at the bottom of the video/page */
+  .content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    top: 79px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Style the button used to pause/play the video */
+  #myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #myBtn:hover {
+    background: #ddd;
+    color: black;
+  }
+    

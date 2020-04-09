@@ -23,10 +23,14 @@
   <span style="margin-left: 0px;">Delete</span>
 </button>
     </form>
+     {{#if @root.isAuth}}
       <form action="comments/{{dataValues.id}}" method="POST" class="comform">
      <input type="submit" value="add comment"  class="comment btn btn-secondary"/>
-      <a class="commid" href="comments/{{dataValues.id}}">comments</a>
+      
     </form>
+    
+    {{/if}}
+    <a class="commid" href="comments/{{dataValues.id}}">comments</a>
     <div class="comments">
      
     </div>

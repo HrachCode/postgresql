@@ -1,0 +1,71 @@
+{{#if upload}}
+
+   <div class="container">
+    <h1>File Upload</h1>
+   
+    <form action="upload" method="POST" enctype="multipart/form-data">
+      <div class="file-field input-field">
+        <div class="btn grey">
+          <span>File</span>
+          <input name="myImage" type="file">
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text">
+        </div>
+      </div>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+    <br>
+  
+  </div>
+
+{{else}}
+<div class="tests">
+<!-- The video -->
+<video id="myVideo" playsinline="" muted="" autoplay="" loop="" data-silent="false" class="lrg-16x12" src="https://cdn.dribbble.com/users/5033103/screenshots/10953207/media/af15181a37bb65b29d8680bd663566d8.mp4">
+        </video>
+<!-- Optional: some overlay text to describe the video -->
+<div class="content">
+  {{#if data}}
+    {{#each data}}
+       
+    <h2>post  {{dataValues.title}}</h2>
+    <h1>coment ouner {{dataValues.post_comments.dataValues.userName}}</h1>
+     <h3>coment {{dataValues.post_comments.dataValues.comment}}</h3>
+
+     <br
+{{/each}}
+  {{/if}}
+
+   {{#if user}}
+    {{#each user}}
+       
+   <figure class="snip1268">
+  <div class="image">
+    <img src="{{img}}" alt="sq-sample4"/>
+    <div class="icons">
+      <a href="#"><i class="ion-star"></i></a>
+      <a href="#"> <i class="ion-share"></i></a>
+      <a href="#"> <i class="ion-search"></i></a>
+    </div>
+    <a href="#" class="add-to-cart">Add to Cart</a>
+  </div>
+  <figcaption>
+    <h2>{{userName}}</h2>
+    <p>My family is dysfunctional and my parents won't empower me. Consequently I'm not self actualized.</p>
+    
+  </figcaption>
+</figure>
+     
+{{/each}}
+  {{/if}}
+   
+ 
+  
+ <form action="/">
+         <button id="myBtn" type="submit">Home</button>
+ </form>
+</div>
+</div>
+        
+{{/if}}
